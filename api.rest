@@ -1,0 +1,75 @@
+//test apis user
+
+###
+POST http://localhost:4002/api/transactions/signin
+Content-Type: application/json
+
+{
+  "email": "test@test.co",
+  "password": "123"
+}
+
+//test apis transaction
+
+###
+GET http://localhost:4002/api/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzQxYmNmOTk0NmJlYmVhNzJjZTgyMDkiLCJpYXQiOjE2NjUyNTUzNDV9.D7v2PYNcTPbq6iIc4fhhj8GMaXJFsPi7V_KBh7e3Mrk
+
+###
+POST http://localhost:4001/api/transactions
+Content-Type: application/json
+
+{
+  "category": "Ingreso",
+  "notes": "Notas sombre el registro",
+  "labels": "Compra",
+  "amoint": 10000,
+  "coin": "COP",
+  "img": "IMG"
+}
+
+###
+GET http://localhost:4001/api/transactions/63263f3a686c5e4d5deb666d
+
+###
+PUT http://localhost:4001/api/transactions/63263f3a686c5e4d5deb666d
+Content-Type: application/json
+
+{
+  "amoint": 22000
+}
+
+###
+DELETE http://localhost:4001/api/transactions/63263f37686c5e4d5deb666b
+
+
+
+//test apis categories
+
+###
+GET http://localhost:4001/api/transactions/settings/categories
+
+###
+POST http://localhost:4001/api/transactions/settings/categories
+Content-Type: application/json
+
+{
+  "category": "Gasto",
+  "icon": "icon",
+  "color": "#FFFFFF",
+  "name": "Ropa"
+}
+
+###
+GET http://localhost:4001/api/transactions/settings/categories/633b9d1ca25ee8cbb9ee3eba
+
+###
+PUT http://localhost:4001/api/transactions/settings/categories/633b9d1ca25ee8cbb9ee3eba
+Content-Type: application/json
+
+{
+  "name": "Salario"
+}
+
+###
+DELETE http://localhost:4001/api/transactions/settings/categories/633b9d1ca25ee8cbb9ee3eba
