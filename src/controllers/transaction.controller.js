@@ -1,5 +1,5 @@
 const transactionCtrl = {}
-const Transaction = require('../models/Transaction')
+const Transaction = require('../models/transaction')
 
 //controller list
 transactionCtrl.getTransactions = async (req, res) => {
