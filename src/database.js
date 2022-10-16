@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/db-income-expense', {
+mongoose.connect('mongodb+srv://app-finance-main-db-0064c4eaebd:jfhyPsd53aW6v3CRJJzCmPp7Y4GKSn@prod-us-central1-1.lfuy1.mongodb.net/app-finance-main-db-0064c4eaebd', {
   useUnifiedTopology: true,
   useNewUrlParser: true
 })
